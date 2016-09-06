@@ -1,0 +1,70 @@
+  $mainNav: '.main-nav';
+  $navWrap: '.nav-wrapper';
+/* Nav ====================================================================== */
+  #{$navWrap}{
+     #{$itemTrigger}{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  #{$mainNav}{
+    a{
+      position: relative;
+      margin-left: $mainIndent*.5;
+      padding: $mainIndent*.25 $mainIndent*.5;
+      border-radius: 2px;
+      &:hover,
+      &.active{
+        background: $primaryTextColor;
+        color: #FFF;
+      }
+    }
+  }
+/* Media Queries ============================================================ */
+  @media screen and (max-width: $m){
+    #{$mainNav}{
+      flex-flow: column;
+      position: absolute;
+      max-width: 200px;
+      width: 100%;
+      max-height: 0;
+      top: 100%;
+      right: 0;
+      background: #FFF;
+      text-align: right;
+      transition: max-height $slowSpeed linear;
+      overflow: hidden;
+      @include box-shadow(-1px 1px 1px 0px rgba(#000,.2));
+      &.active{
+        max-height: 1000px;
+      }
+      li{
+        flex: 0 1 100%;
+      }
+      a{
+        width: 100%;
+        margin: 0;
+        padding: $mainIndent*.5 $mainIndent;
+        border-radius: 0;
+      }
+    }
+    #{$navWrap}{
+      #{$itemTrigger}{
+        display: flex;
+      }
+    }
+  }
+  @media screen and (max-width: $xs){
+    #{$mainNav}{
+      max-width: 100%;
+      text-align: center;
+      &.active{
+        border-top: 1px solid;
+        border-bottom: 5px solid;
+      }
+    }
+  }
+/* ========================================================================== */

@@ -1,0 +1,31 @@
+@import 'base/module';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+@import 'utils/keyframes';
+@import 'utils/icons';
+
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+
+@import 'vendors/owlcarousel';
+
+@import 'components/module';
+@import 'components/animations';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/before-after';
+@import 'components/tabs';
+@import 'components/accordion';
+@import 'components/map';
+
+@import 'sections/hero-image';
+@import 'sections/about-company';
+@import 'sections/services';
+@import 'sections/doctors';
+@import 'sections/prices';
+
+@import 'pages/module';

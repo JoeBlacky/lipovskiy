@@ -1,0 +1,11 @@
+/*  With Icons ============================================================== */
+	#{$linkWithIcon}{
+		display: inline-flex;
+		align-items: center;
+		line-height: $mainIndent;
+		&::before{
+			padding-right: $mainIndent*.25;
+			color: $secondaryColor;
+		}
+	}
+/*  ========================================================================= */

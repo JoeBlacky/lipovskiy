@@ -1,0 +1,93 @@
+/* ========================================================================== */
+  #{$roundedImages}{
+    display: flex;
+    figure{
+      position: relative;
+      flex: 0 1 50%;
+      max-width: 250px;
+      margin: 0 $mainIndent $mainIndent*3;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: $mainIndent/2 solid rgba(#FFF,.5);
+        z-index: 1;
+        @include border-radius(50%);
+        @include box-shadow(0 2px 3px 0 rgba($primaryDarkColor,.5));
+      }
+      img{
+        border-radius: 50%;
+      }
+    }
+    figcaption{
+      position: absolute;
+      top: 100%;
+      width: 90px;
+      left: calc(50% - 45px);
+      padding: $mainIndent*.5 $mainIndent*.25;
+      margin: $mainIndent 0 0;
+      text-align: center;
+      cursor: default;
+      background: $attentionColor;
+    }
+    .after{
+      figcaption{
+        right: 0;
+        background: $successColor;
+      }
+    }
+  }
+/* Media Queries ============================================================ */
+  @media screen and (max-width: $xs){
+    #{$roundedImages}{
+      position: relative;
+      max-width: $minWidth - $mainIndent*2;
+      margin: 0 auto;
+      figure{
+        flex: 0 1 100%;
+        margin: 0 auto $mainIndent*3;
+      }
+      figcaption{
+        left: 0;
+        border: 2px solid;
+        transition: border-color $fastSpeed linear;
+      }
+      .after{
+        position: absolute;
+        left: 15px;
+        top: 0;
+        img{
+          transition:
+            opacity $fastSpeed linear,
+            visibility $fastSpeed linear;
+          opacity: 0;
+          visibility: hidden;
+        }
+        figcaption{
+          left: auto;
+          right: 0;
+          border-color: transparent;
+        }
+      }
+      &.active{
+        img{
+          opacity: 1;
+          visibility: visible;
+        }
+        .before{
+          figcaption{
+            border-color: transparent;
+          }
+        }
+        .after{
+          figcaption{
+            border: 2px solid;
+          }
+        }
+      }
+    }
+  }
+/* ========================================================================== */

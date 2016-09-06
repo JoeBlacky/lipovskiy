@@ -1,0 +1,57 @@
+/*  ====================================================================================== */
+  .accordion{
+    margin: 0 0 $mainIndent;
+    &-hidden{
+      display: none;
+      &:checked{
+        + .accordion-headline{
+          background-color: $secondaryTextColor;
+          + .accordion-content{
+            max-height: 500px;
+            padding: $mainIndent;
+          }
+        }
+      }
+    }
+    &-content{
+      max-height: 0;
+      overflow: hidden;
+      box-shadow: 0 0 1px -1px #000;
+      @extend %transition-slow-speed;
+    }
+    &-headline{
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: $mainIndent;
+      font: 20px/1 $primaryFont;
+      text-transform: uppercase;
+      color: #FFF;
+      background: $primaryTextColor url(../img/noise.png) repeat top left;
+      @extend %transition-normal-speed;
+      &:first-of-type{
+        &::before{
+          display: none;
+        }
+      }
+      &:hover{
+        background-color: darken($primaryTextColor,5%);
+      }
+      &::before{
+        display: block;
+        position: absolute;
+        top: 0;
+      }
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-top: 1px solid darken($primaryTextColor,10%);
+        border-bottom: 1px solid lighten($primaryTextColor,10%);
+      }
+    }
+  }
+/*  ====================================================================================== */

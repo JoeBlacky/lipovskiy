@@ -1,0 +1,16 @@
+	$itemTrigger: '.item-trigger';
+/* Main Nav Trigger ========================================================= */
+	#{$itemTrigger}{
+		cursor: pointer;
+		&.menu{
+			background: $primaryTextColor;
+			color: #FFF;
+			font-size: 12px;
+			border-radius: 2px;
+			transition: background $fastSpeed ease-in;
+			&.active{
+				background: $secondaryColor;
+			}
+		}
+	}
+/* ========================================================================== */

@@ -1,0 +1,8 @@
+{
+  "ru-RU": {
+    "reqFieldError":  "This field is mandatory",
+    "nameError":      "Name must be 2-32 chars long and contain A-z letters",
+    "phoneError":     "Phone must be 6-12 chars long and be numeric",
+    "emailError":     "Please enter a valid email",
+  }
+}

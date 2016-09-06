@@ -1,0 +1,25 @@
+/*  ====================================================================================== */
+  .subscribe-section{
+    position: relative;
+    padding: 0;
+    background: $primaryTextColor url(../img/noise.png) repeat top left;
+    color: #FFF;
+    @include box-shadow(0 0 1px $primaryDarkColor);
+    .title{
+      margin: 0;
+      padding-right: 0;
+      font-size: 18px;
+    }
+    .description{
+      font-size: 0;
+    }
+    .btn,
+    fieldset{
+      width: 30%;
+      vertical-align: bottom;
+    }
+    fieldset{
+      width: 70%;
+    }
+  }
+/*  ====================================================================================== */

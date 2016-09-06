@@ -1,0 +1,40 @@
+/* Icons ================================================================================= */
+  #{$iconClass}{
+    &::before,
+    &::after{
+      display: block;
+      font-family: $iconsFont;
+      @extend %transition-normal-speed;
+    }
+    &.menu{
+      &::before{
+        content: $iMenu;
+      }
+    }
+    &.pin{
+      &::before{
+        content: $iPin;
+      }
+    }
+    &.phone{
+      &::before{
+        content: $iPhone;
+      }
+    }
+    &.mail{
+      &::before{
+        content: $iEnvelope;
+      }
+    }
+    &.ruble{
+      &::before{
+        content: $iRuble;
+      }
+    }
+    &.time{
+      &::before{
+        content: $iClock;
+      }
+    }
+  }
+/* ======================================================================================= */

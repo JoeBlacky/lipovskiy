@@ -1,0 +1,78 @@
+/* Colors ================================================================================ */
+  input,
+  textarea{
+    padding: $mainIndent*.5;
+    margin: 0;
+    border: 1px solid transparent;
+    font: 14px/20px $primaryFont;
+    @extend %resetAppearence;
+    @extend %transition-fastSpeed;
+    &:focus{
+      border-color: $secondaryTextColor;
+    }
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    overflow: auto;
+  }
+  label{
+    display: inline-block;
+    margin: 0 0 $mainIndent/4;
+    font: 14px/16px $primaryFont;
+    cursor: pointer;
+  }
+  form{
+    position: relative;
+    &::before{
+      content: '';
+      background: #FFF #{$ajaxLoader} no-repeat center center / 70px 70px;
+      transition: opacity $fastSpeed linear, visibility $fastSpeed linear;
+      @extend %overlay;
+      @extend %hidden;
+    }
+    &.loading{
+      &::before{
+        @extend %visible;
+      }
+    }
+    .fields{
+      flex-wrap: wrap;
+      margin: 0 (-$mainIndent*.5);
+    }
+    .field{
+      flex: 0 1 50%;
+      padding: $mainIndent*.5;
+    }
+    .wide{
+      flex: 0 1 100%;
+    }
+  }
+  .message{
+    display: block;
+    padding: $mainIndent*.5;
+    margin: $mainIndent*.5 0 0;
+    border: 1px solid $attentionColor;
+    background: rgba($attentionColor,.1);
+    font-size: 12px;
+    &.success{
+      background: rgba($successColor,.5);
+    }
+    &.error{
+      background: rgba($errorColor,.5);
+    }
+  }
+  .validation-error{
+    border-color: $errorColor;
+    background: rgba($errorColor,.1);
+    color: #FFF;
+  }
+  .ajax-respond{
+    text-align: center;
+  }
+  .contact-form{
+    #{$button}{
+      margin: 20px 0 20px auto;
+    }
+  }
+/* ========================================================================== */

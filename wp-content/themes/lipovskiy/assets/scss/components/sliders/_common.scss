@@ -1,0 +1,61 @@
+	$slider:    '.slider';
+	$slide:     '.slide';
+	$slides:    '.slides';
+
+	$sliderNav: '.slider-nav';
+	$prevSlide: '.prev';
+	$nextSlide: '.next';
+	$slideNavW: 50px;
+	$slideNavH: $slideNavW;
+
+	$sliderDots: '.slider-dots';
+	$slideDot:   '.dot';
+	$slideDotW:  15px;
+	$slideDotH:  $slideDotW;
+/* Slider | Common ========================================================== */
+	#{$slider}{
+		overflow: hidden;
+	}
+	#{$slides}{
+		height: 100%;
+	}
+/* Slider | Nav ============================================================= */
+	#{$sliderNav}{
+		display: flex;
+		justify-content: space-between;
+		a{
+			width: $slideNavW;
+			height: $slideNavH;
+			&::before{
+				content: $iArrowLeft;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				font: 20px/1 $iconsFont;
+			}
+		}
+		#{$nextSlide}{
+			&::before{
+				content: $iArrowRight;
+			}
+		}
+	}
+/* Slider | Dots ============================================================ */
+	#{$sliderDots}{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		#{$slideDot}{
+			width: $slideDotW;
+			height: $slideDotH;
+			margin: 0 5px;
+			border: 2px solid;
+			cursor: pointer;
+			transition: color $fastSpeed linear;
+			&.active{
+				color: $secondaryColor;
+			}
+		}
+	}
+/* ========================================================================== */

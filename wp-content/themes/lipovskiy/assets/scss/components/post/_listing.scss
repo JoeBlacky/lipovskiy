@@ -1,0 +1,78 @@
+/* Post Listing ============================================================= */
+	#{$postListing}{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 (-$mainIndent) $mainIndent*2;
+		#{$listItem}{
+			flex: 0 1 33.3333334%;
+			padding: 0 $mainIndent $mainIndent*2;
+		}
+		#{$post}{
+			width: 100%;
+			height: 100%;
+			background: $primaryTextColor url(../img/noise.png) repeat left top;
+			color: #FFF;
+			font-size: 14px;
+			text-align: center;
+		}
+		#{$postImage}{
+			height: 200px;
+		}
+		#{$postEntry}{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 300px;
+			padding: $mainIndent $mainIndent $mainIndent*1.5;
+		}
+		#{$postTitle}{
+			font-size: 24px;
+			margin: 0 0 $mainIndent*.75;
+			padding: 0 $mainIndent*.5 $mainIndent*.5;
+			border-bottom: 1px solid;
+		}
+		#{$postContent}{
+			padding: 0;
+			color: inherit;
+			margin: 0 0 $mainIndent*1.5;
+		}
+		#{$button}{
+			width: 150px;
+			margin-top: auto;
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $mainWidth){
+		#{$postListing}{
+			margin-left: -$mainIndent*.5;
+			margin-right: -$mainIndent*.5;
+			#{$listItem}{
+				padding: 0 $mainIndent*.5 $mainIndent;
+			}
+		}
+	}
+	@media screen and (max-width: $l){
+		#{$postListing}{
+			#{$postTitle}{
+				font-size: 20px;
+			}
+		}
+	}
+	@media screen and (max-width: $m){
+		#{$postListing}{
+			#{$listItem}{
+				flex: 0 1 50%;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$postListing}{
+			#{$listItem}{
+				flex: 0 1 100%;
+			}
+			#{$postEntry}{
+				height: auto;
+			}
+		}
+	}
+/* ========================================================================== */

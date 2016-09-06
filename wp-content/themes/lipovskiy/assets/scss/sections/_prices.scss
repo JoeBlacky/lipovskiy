@@ -1,0 +1,43 @@
+  $pricesSection: '.b-service';
+/* Prices Section =========================================================== */
+  #{$pricesSection}{
+    text-align: center;
+    #{$title}{
+      margin: 0 0 $mainIndent*2.5;
+    }
+    header{
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      margin: 0 0 $mainIndent;
+    }
+    img{
+      width: 70px;
+      height: 70px;
+      padding: $mainIndent*.5;
+      margin-bottom: $mainIndent*.5;
+      background: $primaryTextColor url(../img/noise.png) repeat left top;
+      border-radius: 50%;
+      border: 2px solid $secondaryColor;
+      box-shadow: 0 2px 5px 1px #000;
+    }
+    #{$subTitle}{
+      margin: 0;
+      font-size: 30px;
+    }
+    #{$priceTable}{
+      text-align: left;
+    }
+  }
+  .s-prices{
+    text-align: center;
+  }
+/* Media Queries ============================================================ */
+  @media screen and (max-width: $m){
+    #{$pricesSection}{
+      #{$subTitle}{
+        font-size: inherit;
+      }
+    }
+  }
+/* ========================================================================== */

@@ -1,0 +1,60 @@
+	$pageIntro: '.page-intro';
+/* Common =================================================================== */
+	#{$pageIntro}{
+		position: relative;
+		height: 500px;
+		background: top center / cover;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(#000, .5);
+			box-shadow: 0 0 4px -1px #000 inset;
+		}
+		#{$gDescription}{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
+			height: 100%;
+			padding: $mainIndent*2;
+			margin: 0 auto;
+			text-align: center;
+			color: #FFF;
+		}
+		#{$postTitle}{
+			margin: 0;
+			font-size: 50px;
+			text-shadow: 0 0 1px $primaryTextColor;
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$pageIntro}{
+			height: 400px;
+			#{$postTitle}{
+				font-size: 40px;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$pageIntro}{
+			height: 300px;
+			#{$postTitle}{
+				font-size: 30px;
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$pageIntro}{
+			height: 200px;
+			#{$postTitle}{
+				font-size: 20px;
+			}
+		}
+	}
+/* ========================================================================== */

@@ -1,0 +1,9 @@
+	$pageContacts: '.p-contacts';
+/* Page Entry =============================================================== */
+	#{$pageContacts}{
+		flex-flow: column;
+		#{$postEntry}{
+			padding-bottom: $mainIndent;
+		}
+	}
+/* ========================================================================== */

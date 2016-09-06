@@ -1,0 +1,49 @@
+/* Colors ================================================================================ */
+  .btn{
+    padding: $mainIndent*.75 $mainIndent*1.5;
+    outline: 0;
+    background: $primaryTextColor;
+    color: #FFF;
+    font: 16px/20px $primaryFont;
+    cursor: pointer;
+    text-align: center;
+    @extend %resetAppearence;
+    @extend %transition-normal-speed;
+    @include border-radius(2px);
+    &:hover{
+      color: #FFF;
+      background: $secondaryTextColor;
+    }
+    &-small{
+      padding: $mainIndent*.5 $mainIndent;
+      font-weight: 300;
+    }
+    &-secondary{
+      background: $secondaryTextColor;
+      &:hover{
+        background: $primaryTextColor;
+      }
+    }
+    &-light{
+      background: #FFF;
+      border: 1px solid #FFF;
+      color: $primaryTextColor;
+      &:hover{
+        background: transparent;
+      }
+    }
+    &-success{
+      background: $successColor;
+      border: 1px solid $successColor;
+      &:hover{
+        background: transparent;
+      }
+    }
+    &-attention{
+      background-color: $attentionColor;
+      &:hover{
+        background-color: darken($attentionColor, 10%);
+      }
+    }
+  }
+/* ======================================================================================= */

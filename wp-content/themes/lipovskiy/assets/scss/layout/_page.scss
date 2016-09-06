@@ -1,0 +1,135 @@
+/* Common =================================================================== */
+  body{
+    min-width: $minWidth;
+    margin: 0;
+    color: $primaryColor;
+    font: 300 16px/1.5 $primaryFont;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    font-family: $headingsFont;
+    font-weight: 400;
+  }
+  a{
+    @extend %transition-normal-speed;
+    &:hover{
+      color: $secondaryColor;
+    }
+  }
+  p{
+    margin: 0 0 $mainIndent*1.25;
+  }
+  table{
+    width: 100%;
+    margin: 0 0 $mainIndent;
+    border-collapse: collapse;
+  }
+  th{
+    font: 20px/1 $primaryFont;
+    text-transform: uppercase;
+  }
+  td{
+    padding: $mainIndent/2 0;
+    border-bottom: 1px solid $dividerColor;
+  }
+/*  Helper Classes ========================================================== */
+  .page{
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .flex{
+     display: flex;
+  }
+  .itm{
+    @extend %inline-block-middle;
+  }
+  .mw{
+    max-width: $mainWidth;
+    padding-left: $mainIndent;
+    padding-right: $mainIndent;
+    margin: 0 auto;
+  }
+  #{$title}{
+    @extend %title;
+  }
+  #{$subTitle}{
+    font-size: 24px;
+  }
+  .img-rounded{
+    img{
+      @include border-radius(50%);
+    }
+  }
+  [data-grid-cols="3"]{
+    .grid-itm{
+      width: 33.3334%;
+    }
+  }
+  .grid-itm{
+    width: 50%;
+    padding: $mainIndent;
+    font-size: 18px;
+    @extend %inline-block-middle;
+  }
+  .grid{
+    font-size: 0;
+    margin: 0 (-$mainIndent);
+    &[data-cols="4"]{
+      .grid-itm{
+        width: 25%;
+      }
+    }
+    &[data-cols="5"]{
+      .grid-itm{
+        width: 20%;
+      }
+    }
+  }
+  .main{
+    flex: 1;
+  }
+  .section{
+    padding: $mainIndent*2 0;
+     #{$title},
+    #{$subTitle}{
+      color: $primaryDarkColor;
+    }
+  }
+  .shadow-section{
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 1px 4px rgba(#000,.3), 0 0 40px rgba(#000,.1) inset;
+  }
+  .links{
+    padding: $mainIndent/4 0;
+    font: 14px/16px $primaryFont;
+    .link{
+      margin: 0 $mainIndent/2 0 0;
+      &::before{
+        @extend %inline-block-middle;
+      }
+    }
+  }
+/* Media Queries ============================================================ */
+  @media screen and (max-width: 1000px){
+    .mw{
+      padding: 0 20px;
+    }
+  }
+  @media screen and (max-width: $m){
+    #{$title}{
+      font-size: 36px;
+    }
+  }
+  @media screen and (max-width: $s){
+    body{
+      font-size: 14px;
+    }
+    #{$title}{
+      font-size: 32px;
+    }
+  }
+/* ========================================================================== */

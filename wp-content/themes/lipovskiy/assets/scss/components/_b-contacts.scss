@@ -1,0 +1,61 @@
+	$contactsBlock: '.b-contacts';
+/* Common =================================================================== */
+	#{$contactsBlock}{
+		flex-flow: column;
+		padding-top: $mainIndent*3;
+		padding-bottom: $mainIndent*3;
+		.links{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 16px;
+			text-align: center;
+			li{
+				padding: 0 $mainIndent*.25;
+				flex: 0 1 25%;
+			}
+		}
+		.link{
+			margin: 0 0 20px;
+		}
+		#{$linkWithIcon}{
+			flex-flow: column;
+			&::before{
+				color: inherit;
+				flex: 0 1 100%;
+				padding: 10px;
+				margin: 0 0 10px;
+				border-bottom: 1px solid;
+				font-size: 24px;
+			}
+		}
+		.map{
+			height: 300px;
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $l){
+		#{$contactsBlock}{
+			padding: $mainIndent 0;
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$contactsBlock}{
+			.links{
+				li{
+					flex: 0 1 50%;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$contactsBlock}{
+			.links{
+				padding: 0 0 $mainIndent;
+				font-size: 14px;
+			}
+			.map{
+				height: 200px;
+			}
+		}
+	}
+/* ========================================================================== */

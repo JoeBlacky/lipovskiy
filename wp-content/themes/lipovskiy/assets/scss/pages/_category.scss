@@ -1,0 +1,11 @@
+	$pageCategory: '.p-category';
+/* Page Entry =============================================================== */
+	#{$pageCategory}{
+		#{$gDescription}{
+			padding: $mainIndent*2 0;
+		}
+		#{$pageTitle}{
+			margin: 0 0 $mainIndent*.5;
+		}
+	}
+/* ========================================================================== */
