@@ -28,9 +28,8 @@
   }
 /* Top bar with contact info ================================================ */
   #{$hInfoBar}{
-    background: $primaryTextColor url(../img/noise.png) repeat left top;
-    color: #FFF;
     padding: $mainIndent*.5 0;
+    @extend %darkBlock;
     li{
       &:last-child{
         margin-left: auto;

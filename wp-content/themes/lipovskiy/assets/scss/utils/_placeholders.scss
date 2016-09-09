@@ -54,8 +54,14 @@
     opacity: 1;
     visibility: visible;
   }
+/* Headings ================================================================= */
   %title{
     margin: 0 0 $mainIndent;
     font-size: 40px;
+  }
+/* Blocks =================================================================== */
+  %darkBlock{
+    color: #FFF;
+    background: $primaryTextColor url(../img/noise.png) repeat left top;
   }
 /* ========================================================================== */

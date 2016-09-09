@@ -64,37 +64,12 @@
       @include border-radius(50%);
     }
   }
-  [data-grid-cols="3"]{
-    .grid-itm{
-      width: 33.3334%;
-    }
-  }
-  .grid-itm{
-    width: 50%;
-    padding: $mainIndent;
-    font-size: 18px;
-    @extend %inline-block-middle;
-  }
-  .grid{
-    font-size: 0;
-    margin: 0 (-$mainIndent);
-    &[data-cols="4"]{
-      .grid-itm{
-        width: 25%;
-      }
-    }
-    &[data-cols="5"]{
-      .grid-itm{
-        width: 20%;
-      }
-    }
-  }
   .main{
     flex: 1 1 auto;
   }
   .section{
     padding: $mainIndent*2 0;
-     #{$title},
+    #{$title},
     #{$subTitle}{
       color: $primaryDarkColor;
     }
@@ -113,6 +88,9 @@
         @extend %inline-block-middle;
       }
     }
+  }
+  .b-dark{
+    @extend %darkBlock;
   }
 /* Media Queries ============================================================ */
   @media screen and (max-width: 1000px){

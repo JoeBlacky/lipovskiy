@@ -9,10 +9,9 @@
 		#{$post}{
 			display: block;
 			margin: 0 $mainIndent $mainIndent*2;
-			background: $primaryTextColor url(../img/noise.png) repeat left top;
-			color: #FFF;
 			font-size: 14px;
 			text-align: center;
+			@extend %darkBlock;
 		}
 		#{$postImage}{
 			height: 200px;

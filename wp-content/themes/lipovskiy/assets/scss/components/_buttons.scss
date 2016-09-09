@@ -2,17 +2,16 @@
   .btn{
     padding: $mainIndent*.75 $mainIndent*1.5;
     outline: 0;
-    background: $primaryTextColor;
-    color: #FFF;
     font: 16px/20px $primaryFont;
     cursor: pointer;
     text-align: center;
+    @extend %darkBlock;
     @extend %resetAppearence;
     @extend %transition-normal-speed;
     @include border-radius(2px);
     &:hover{
       color: #FFF;
-      background: $secondaryTextColor;
+      background-color: $secondaryTextColor;
     }
     &-small{
       padding: $mainIndent*.5 $mainIndent;
@@ -21,7 +20,7 @@
     &-secondary{
       background: $secondaryTextColor;
       &:hover{
-        background: $primaryTextColor;
+        background-color: $primaryTextColor;
       }
     }
     &-light{
@@ -40,7 +39,7 @@
       }
     }
     &-attention{
-      background-color: $attentionColor;
+      background: $attentionColor;
       &:hover{
         background-color: darken($attentionColor, 10%);
       }
