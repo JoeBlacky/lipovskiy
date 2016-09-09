@@ -16,6 +16,9 @@
       margin-left: $mainIndent*.5;
       padding: $mainIndent*.25 $mainIndent*.5;
       border-radius: 2px;
+      transition:
+        color $fastSpeed linear,
+        background $fastSpeed linear;
       &:hover,
       &.active{
         @extend %darkBlock;

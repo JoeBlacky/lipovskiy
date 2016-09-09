@@ -79,6 +79,9 @@ $fConactFormW: 100% - $fContactInfoW;
   #{$notHandheld}{
     #{$footer}{
       a#{$linkWithIcon}{
+        transition:
+          color $fastSpeed linear,
+          background $fastSpeed linear;
         &:hover{
           background: $secondaryTextColor;
           color: #FFF;
