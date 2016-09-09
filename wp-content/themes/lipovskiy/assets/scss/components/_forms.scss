@@ -42,7 +42,9 @@
     }
     .field{
       flex: 0 1 50%;
-      padding: $mainIndent*.5;
+      &-inner{
+        padding: $mainIndent*.5;
+      }
     }
     .wide{
       flex: 0 1 100%;
