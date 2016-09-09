@@ -63,14 +63,14 @@
   <?php else: ?>
     <div class="list-item">
       <a id="post-<?php the_ID(); ?>" class="post" href="<?php echo esc_url(get_permalink()); ?>">
-        <div class="post-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID); ?>">
+        <div class="post-image" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
         <div class="post-entry">
           <h2 class="post-title">
-            <?php echo $post->post_title ?>
+            <?php echo the_title() ?>
           </h2>
           <div class="post-content">
-            <?php echo customStringLength($post->post_content, 300); ?>
+            <?php echo the_excerpt(); ?>
           </div>
           <span class="btn btn-small btn-light">
             <?php _e('Read more'); ?>

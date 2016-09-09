@@ -4,7 +4,7 @@
  */
 ?>
 <?php
-  $prices = getCategoryPosts('post', '-1','services');
+  $services = customPostListing('post', '-1','services');
 ?>
 
 <?php get_header(); ?>
@@ -15,23 +15,23 @@
     <div class="post-content post-entry">
       <?php echo the_content(); ?>
     </div>
-    <?php if($prices): ?>
-      <?php foreach($prices as $post):
-        $prices = get_field('prices', $post->ID);
-        $thumb  = get_field('thumbnail', $post->ID);
+    <?php if($services->have_posts()): ?>
+      <?php while($services->have_posts()): $services->the_post();
+        $prices = get_field('prices');
+        $thumb  = get_field('thumbnail');
       ?>
         <?php if($prices): ?>
           <section class="b-service">
             <header class="flex">
               <img
                 src="<?php echo $thumb; ?>"
-                alt="<?php echo $post->post_title; ?>"
+                alt="<?php echo the_title(); ?>"
                 width="50"
                 height="50"
               />
               <h3 class="sub-title">
-                <a href="<?php echo get_permalink($post->ID); ?>">
-                  <?php echo $post->post_title; ?>
+                <a href="<?php echo get_permalink(); ?>">
+                  <?php echo the_title(); ?>
                 </a>
               </h3>
             </header>
@@ -45,7 +45,7 @@
             </table>
           </section>
         <?php endif; ?>
-      <?php endforeach; wp_reset_postdata(); ?>
+      <?php endwhile; wp_reset_postdata(); ?>
     <?php endif; ?>
   </div>
 <?php endwhile; ?>

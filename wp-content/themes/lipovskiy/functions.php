@@ -42,6 +42,7 @@ function lipovskiy_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'excerpt' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -133,7 +134,12 @@ function new_settings_field_callback( $val ){
 		   value="<?php echo esc_attr( get_option($option_name) ); ?>" />
 	<?php
 }
-
+/* Add excerpts to page ===================================================== */
+	function addPageExcerpt() {
+	    add_post_type_support('page', array('excerpt'));
+	}
+	add_action('init', 'addPageExcerpt');
+/* Add excerpts to page ===================================================== */
 /**
  * Enqueue scripts and styles.
  */
@@ -203,13 +209,13 @@ require get_template_directory() . '/inc/jetpack.php';
 	  }
 	}
 /* Custom Post Listing ====================================================== */
-	function customPostListing($postType, $showPerPage = -1) {
+	function customPostListing($postType, $showPerPage = '-1', $category = '') {
 	  $args = array(
       'post_type'      => $postType,
       'post_status'    => 'publish',
       'post__not_in'   => array(get_post()->ID),
       'posts_per_page' => $showPerPage,
-      'order'					 => 'ASC'
+      'category_name'  => $category
 	  );
 	  $postList = new WP_Query($args);
     return $postList;
@@ -223,6 +229,7 @@ require get_template_directory() . '/inc/jetpack.php';
       'posts_per_page' => $showPerPage,
       'category_name'  => $category
 	  );
+
 	  $postList = get_posts($args);
     return $postList;
 	}

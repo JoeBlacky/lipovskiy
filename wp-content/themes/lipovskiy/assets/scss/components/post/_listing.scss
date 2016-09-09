@@ -30,10 +30,8 @@
 			border-bottom: 1px solid;
 		}
 		#{$postContent}{
-			display: block;
 			padding: 0;
 			color: inherit;
-			margin: 0 0 $mainIndent*1.5;
 		}
 		#{$button}{
 			width: 150px;
@@ -45,8 +43,8 @@
 		#{$postListing}{
 			margin-left: -$mainIndent*.5;
 			margin-right: -$mainIndent*.5;
-			#{$listItem}{
-				padding: 0 $mainIndent*.5 $mainIndent;
+			#{$post}{
+				margin: 0 $mainIndent*.5 $mainIndent;
 			}
 		}
 	}

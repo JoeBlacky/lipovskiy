@@ -1,6 +1,7 @@
 /* Price Table ============================================================== */
   #{$priceTable}{
-    margin: 0 0 $mainIndent*2.5;
+    max-width: $m;
+    margin: 0 auto $mainIndent*2.5;
     border-top: 1px solid $dividerColor;
     td{
       vertical-align: top;
