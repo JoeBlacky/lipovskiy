@@ -90,7 +90,7 @@
       var map = document.getElementById('map');
       var _this = this;
 
-      if (map && google != undefined) {
+      if (map && typeof google === 'object' && typeof google.maps === 'object') {
         gMap = new google.maps.Map(map, {
           zoom: 17,
           center: _this.getCoords(map),
