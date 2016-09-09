@@ -5,8 +5,10 @@
     margin: 0;
     border: 1px solid transparent;
     font: 14px/20px $primaryFont;
+    transition:
+      border $fastSpeed linear,
+      background $fastSpeed linear;
     @extend %resetAppearence;
-    @extend %transition-fastSpeed;
     &:focus{
       border-color: $secondaryTextColor;
     }

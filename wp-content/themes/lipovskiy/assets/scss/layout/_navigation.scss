@@ -36,7 +36,7 @@
       text-align: right;
       transition: max-height $slowSpeed linear;
       overflow: hidden;
-      @include box-shadow(-1px 1px 1px 0px rgba(#000,.2));
+      box-shadow: -1px 1px 1px 0px rgba(#000,.2);
       &.active{
         max-height: 1000px;
       }

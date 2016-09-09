@@ -5,10 +5,13 @@
     font: 16px/20px $primaryFont;
     cursor: pointer;
     text-align: center;
+    transition:
+      color $fastSpeed linear,
+      background $fastSpeed linear,
+      border $fastSpeed linear;
     @extend %darkBlock;
     @extend %resetAppearence;
-    @extend %transition-normal-speed;
-    @include border-radius(2px);
+    border-radius: 2px;
     &:hover{
       color: #FFF;
       background-color: $secondaryTextColor;

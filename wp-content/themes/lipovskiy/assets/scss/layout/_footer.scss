@@ -15,7 +15,7 @@ $fConactFormW: 100% - $fContactInfoW;
     position: relative;
     z-index: 1;
     @extend %darkBlock;
-    @include box-shadow(0 0 2px $footerBackground);
+    box-shadow: 0 0 2px $footerBackground;
     .mw{
       align-items: flex-start;
       position: relative;

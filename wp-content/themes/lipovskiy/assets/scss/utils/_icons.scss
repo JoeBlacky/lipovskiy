@@ -4,7 +4,7 @@
     &::after{
       display: block;
       font-family: $iconsFont;
-      @extend %transition-normal-speed;
+      transition: color $fastSpeed linear;
     }
     &.menu{
       &::before{

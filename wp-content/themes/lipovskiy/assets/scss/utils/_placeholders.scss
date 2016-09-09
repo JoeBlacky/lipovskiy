@@ -21,24 +21,6 @@
     -ms-border-radius: 50%;
     border-radius: 50%;
   }
-  %transition-slow-speed{
-    @include transition($slowSpeed);
-  }
-  %transition-normal-speed{
-    @include transition($normalSpeed);
-  }
-  %transition-fastSpeed{
-    @include transition($fastSpeed);
-  }
-  %inline-block-top{
-    @include inline-block(top);
-  }
-  %inline-block-middle{
-    @include inline-block(middle);
-  }
-  %inline-block-bottom{
-    @include inline-block(bottom);
-  }
   %overlay{
     position: absolute;
     width: 100%;

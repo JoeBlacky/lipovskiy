@@ -19,7 +19,7 @@
     z-index: 1;
     background: #FFF;
     z-index: 9;
-    @include box-shadow(0 0 4px -1px #000);
+    box-shadow: 0 0 4px -1px #000;
   }
   .admin-bar{
     #{$header}{
@@ -51,7 +51,6 @@
 /* Middle bar with logo and phone =========================================== */
   #{$hMainBar}{
     padding: $mainIndent*.75 0;
-    @extend %transition-normal-speed;
     > .flex{
       justify-content: space-between;
       align-items: center;

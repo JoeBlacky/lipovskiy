@@ -16,7 +16,7 @@
     font-weight: 400;
   }
   a{
-    @extend %transition-normal-speed;
+    transition: color $fastSpeed linear;
     &:hover{
       color: $secondaryColor;
     }
@@ -46,9 +46,6 @@
   .flex{
      display: flex;
   }
-  .itm{
-    @extend %inline-block-middle;
-  }
   .mw{
     max-width: $mainWidth;
     padding-left: $mainIndent;
@@ -63,7 +60,7 @@
   }
   .img-rounded{
     img{
-      @include border-radius(50%);
+     border-radius: 50%;
     }
   }
   .main{
@@ -86,9 +83,6 @@
     font: 14px/16px $primaryFont;
     .link{
       margin: 0 $mainIndent/2 0 0;
-      &::before{
-        @extend %inline-block-middle;
-      }
     }
   }
   .b-dark{

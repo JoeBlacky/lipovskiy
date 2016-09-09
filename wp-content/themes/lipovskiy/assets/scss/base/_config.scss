@@ -1,3 +1,17 @@
+/* Fonts ==================================================================== */
+	$primaryFont:  'Roboto', sans-serif;
+	$headingsFont: 'Play', sans-serif;
+	$iconsFont: 	 'Icomoon';
+ /* Colors ================================================================== */
+	$primaryColor: 			 #505050;
+	$secondaryColor: 	   #11BFF1;
+	$primaryDarkColor:   #111111;
+	$primaryTextColor:   #282F37;
+	$secondaryTextColor: #3D6E99;
+	$dividerColor:       #CCC;
+	$attentionColor:	   #E98B1C;
+	$errorColor:         #CC1D14;
+	$successColor:	 	   #06B86B;
 /* ========================================================================== */
 	$linkWithIcon: '.i-link';
 	$title: 			 '.title';
@@ -9,6 +23,7 @@
 	$priceTable:   '.price-table';
 	$roundedImages: '.rounded-images';
 	$itemTrigger: '.item-trigger';
+	$iconClass: '.icn';
 /* Post ===================================================================== */
 	$post:        '.post';
 	$postTitle:   '.post-title';
@@ -33,10 +48,20 @@
 	$iArrowLeft:  '\E905';
 	$iArrowRight: '\E906';
 	$iMenu: 			'\E907';
-/* Media Sizes ============================================================== */
-	$l: 			 1024px;
-	$m: 			 900px;
-	$s:        700px;
-  $xs:       500px;
-  $minWidth: 320px;
+/* Media Widths ============================================================= */
+	$maxWidth:  1920px;
+	$mainWidth: 1200px;
+	$l: 			  1024px;
+	$m: 			  900px;
+	$s:         700px;
+  $xs:        500px;
+  $minWidth:  320px;
+/* Indents ================================================================== */
+	$mainIndent: 20px;
+/* Transition Speed ========================================================= */
+	$fastSpeed:   .2s;
+	$normalSpeed: $fastSpeed*1.5;
+	$slowSpeed:   $fastSpeed*2.5;
+/* Preloader ================================================================ */
+	$ajaxLoader: url(../img/preloader.svg);
 /* ========================================================================== */
