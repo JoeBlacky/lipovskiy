@@ -10,41 +10,19 @@
 		}
 		#{$slide}{
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			background: $primaryTextColor center top / cover;
 			transition:
 				opacity $fastSpeed linear,
 				visibility $fastSpeed linear;
 			@extend %hidden;
+			@extend %bWithOverlay;
 			&.active{
 				position: relative;
 				@extend %visible;
 			}
-			&::before{
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				background: rgba(#000, .7);
-				box-shadow: 0 0 4px -1px #000 inset;
-			}
 		}
 		#{$gDescription}{
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-flow: column;
-			height: 100%;
-			max-width: $s;
-			margin: 0 auto;
 			padding: $slideNavW*2;
-			text-align: center;
+			@extend %introDescription;
 		}
 		#{$sliderNav}{
 			a{

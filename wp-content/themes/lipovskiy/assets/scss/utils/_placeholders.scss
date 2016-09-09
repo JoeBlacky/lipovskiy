@@ -59,9 +59,34 @@
     margin: 0 0 $mainIndent;
     font-size: 40px;
   }
-/* Blocks =================================================================== */
+/* Secondary Block=========================================================== */
   %darkBlock{
     color: #FFF;
     background: $primaryTextColor url(../img/noise.png) repeat left top;
+  }
+/* Block with overlay ======================================================= */
+  %bWithOverlay{
+    position: relative;
+    height: 500px;
+    background: top center / cover;
+    &::before{
+      content: '';
+      position: absolute;
+      background: rgba(#000, .7);
+      box-shadow: 0 0 4px -1px #000 inset;
+      @extend %overlay;
+    }
+  }
+  %introDescription{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    max-width: $s;
+    margin: 0 auto;
+    padding: $mainIndent*2;
+    text-align: center;
   }
 /* ========================================================================== */
