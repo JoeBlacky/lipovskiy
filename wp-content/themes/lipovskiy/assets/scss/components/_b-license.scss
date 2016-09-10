@@ -1,8 +1,18 @@
 $license: '.b-license';
 /* License Images =========================================================== */
 	#{$license}{
+		position: relative;
+		max-width: $xs;
+		padding: 0 0 $mainIndent $mainIndent;
 		.image{
 			margin: 0 $mainIndent*.5;
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $m){
+		#{$license}{
+			padding: 0;
+			margin: 0 auto $mainIndent*1.5;
 		}
 	}
 /* ========================================================================== */

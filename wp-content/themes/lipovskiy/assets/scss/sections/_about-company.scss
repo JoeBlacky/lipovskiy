@@ -1,22 +1,8 @@
   $aboutSection: '.about-company';
 /* ========================================================================== */
   #{$aboutSection}{
-    #{$gDescription},
-    .image{
-      flex: 1 1 50%;
-    }
     #{$gDescription}{
       padding: 0 $mainIndent*1.5 0 0;
-    }
-    .image{
-      margin: 0 (-$mainIndent*.5);
-      a{
-        margin: 0;
-        padding: 0 $mainIndent*.5;
-      }
-    }
-    img{
-      box-shadow: 0 0 2px -1px #000;
     }
     #{$button}{
       display: block;

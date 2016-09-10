@@ -1,11 +1,6 @@
-<?php
-/**
- * Template Name: Home Page
- */
-?>
 <?php get_header(); ?>
 
-<?php while( have_posts() ) : the_post(); ?>
+<?php while(have_posts()) : the_post(); ?>
   <?php get_template_part('home/hero-slider'); ?>
   <?php get_template_part('home/about'); ?>
   <?php get_template_part('home/services'); ?>
