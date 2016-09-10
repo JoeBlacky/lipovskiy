@@ -12,6 +12,7 @@
       slider.init();
       forms.init();
       map.init();
+      scrollTop.init();
     },
     getLang: function(){
       return document.documentElement.lang;
@@ -423,6 +424,67 @@
     hideSlides: function(slides){
       this.removeActive(slides);
     },
+  }
+
+  var scrollTop = {
+    __proto__:   app,
+    scrollClass: 'scroll-top',
+    scrollSpeed: 400,
+    visible: false,
+
+    init: function(){
+      this.setActive();
+      this.clickEvent();
+    },
+    getBtn: function(){
+      var btn = document.getElementById(this.scrollClass);
+      return btn;
+    },
+    getHeight: function(){
+      var winHeight = window.innerHeight*1.5;
+      return winHeight;
+    },
+    setActive: function(){
+      this.checkOffset(this.getHeight());
+      this.checkOnScroll(this.getHeight());
+    },
+    checkOffset: function(val){
+      var _this = this;
+      var topOffset = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (_this.visible == false && topOffset > val) {
+        _this.getBtn().classList.add(_this.active);
+        _this.visible = true;
+      } else if(_this.visible == true && topOffset < val) {
+        _this.getBtn().classList.remove(_this.active);
+        _this.visible = false;
+      }
+    },
+    checkOnScroll: function(val){
+      var _this = this;
+
+      window.addEventListener('scroll', function(){
+        _this.checkOffset(val);
+      });
+    },
+    clickEvent: function(){
+      var _this = this;
+
+      this.getBtn().addEventListener('click', function(e){
+        e.preventDefault();
+        _this.scrollPage();
+      });
+    },
+    scrollPage: function(){
+      var scrollDuration = this.scrollSpeed,
+          scrollStep = -window.scrollY / (scrollDuration / 15),
+          scrollInterval = setInterval(function(){
+          if ( window.scrollY != 0 ) {
+              window.scrollBy( 0, scrollStep );
+          }
+          else clearInterval(scrollInterval);
+      },15);
+    }
   }
 
   window.onload = (function(){

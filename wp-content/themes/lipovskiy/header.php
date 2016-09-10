@@ -7,7 +7,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="page flex not-handheld">
+<div id="page" class="page flex not-handheld">
 	<header class="header" id="header">
     <div class="links header-info-bar">
       <ul class="mw flex">

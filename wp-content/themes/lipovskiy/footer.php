@@ -16,6 +16,7 @@
       </div>
     </div>
   </footer>
+  <a href="#" id="scroll-top" class="icn d-angle-top scroll-top"></a>
 </div>
 <?php wp_footer(); ?>
 </body>

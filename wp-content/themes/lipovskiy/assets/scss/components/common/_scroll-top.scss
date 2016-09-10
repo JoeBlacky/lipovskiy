@@ -1,0 +1,48 @@
+	$scrollTop: '.scroll-top';
+	$stbWidth:  40px;
+	$stbHeight: $stbWidth;
+/* Common =================================================================== */
+	#{$scrollTop}{
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: $stbWidth;
+		height: $stbWidth;
+		bottom: 0;
+		right: $mainIndent;
+		background-color: $successColor;
+		z-index: 2;
+		font-size: 14px;
+		opacity: .5;
+		transform: translate(0,100%);
+		transition:
+			color $fastSpeed linear,
+			opacity $fastSpeed linear,
+			transform $fastSpeed linear;
+		@extend %darkBlock;
+		&.active{
+			transform: translate(0,0);
+		}
+	}
+/* Not Handheld ============================================================= */
+	#{$notHandheld}{
+		#{$scrollTop}{
+			&:hover{
+				opacity: 1;
+				color: #FFF;
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $mainWidth + $stbWidth*2 + $mainIndent*2){
+		#{$scrollTop}{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -$stbWidth*.5;
+			opacity: 1;
+			border: 1px solid $primaryTextColor;
+		}
+	}
+/* ========================================================================== */

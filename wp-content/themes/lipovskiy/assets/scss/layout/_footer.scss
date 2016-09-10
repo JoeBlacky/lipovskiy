@@ -11,7 +11,6 @@ $fConactForm: '.contact-form';
 $fConactFormW: 100% - $fContactInfoW;
 /* Common =================================================================== */
   #{$footer}{
-    order: 3;
     position: relative;
     z-index: 1;
     @extend %darkBlock;
@@ -143,6 +142,9 @@ $fConactFormW: 100% - $fContactInfoW;
     }
   }
   @media screen and (max-width: $xs){
+    #{$footer}{
+      padding-bottom: $mainIndent;
+    }
     /* Contact Form ========================================================= */
     #{$fConactForm}{
       .field{
