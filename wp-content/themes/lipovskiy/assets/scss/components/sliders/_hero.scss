@@ -10,7 +10,6 @@
 /* Media Queries ============================================================ */
 	@media screen and (max-width: $l){
 		#{$heroSlider}{
-			height: 400px;
 			#{$gDescription}{
 				align-items: center;
 				margin: 0 auto;
