@@ -8,7 +8,7 @@
     <div class="slider wide-slider hero-slider">
       <ul class="slides">
         <?php while($page->have_posts()): $page->the_post(); ?>
-          <li class="slide" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>'); ">
+          <li class="slide lazy" data-lazy="<?php echo get_the_post_thumbnail_url(); ?>">
             <section class="description">
               <h2 class="title">
                 <?php echo the_title(); ?>

@@ -13,6 +13,7 @@
       forms.init();
       map.init();
       scrollTop.init();
+      lazyLoad.init();
     },
     getLang: function(){
       return document.documentElement.lang;
@@ -418,6 +419,7 @@
       for (i = 0; i < slides.length; i++){
         if (slides[i].dataset.link == targetSlide){
           slides[i].classList.add(this.active);
+          lazyLoad.checkVisibility(slides[i]);
         }
       }
     },
@@ -484,6 +486,50 @@
           }
           else clearInterval(scrollInterval);
       },15);
+    }
+  }
+
+  var lazyLoad = {
+    __proto__:     app,
+    visibleStatus: 'data-visible',
+    isVisible:     'yes',
+    replaceStatus: 'data-replaced',
+    isReplaced:    'yes',
+
+    init: function(){
+      var lazy = document.getElementsByClassName('lazy'),
+          _this = this,
+          el;
+      for (var i = 0; i < lazy.length; i++) {
+        el = lazy[i];
+
+        _this.inViewport(el);
+        _this.checkVisibility(el);
+      }
+    },
+    inViewport: function(el){
+      this.setVisibleFlag(el);
+    },
+    setVisibleFlag: function(el){
+      el.setAttribute(this.visibleStatus, this.isVisible);
+    },
+    setReplaceFlag: function(el){
+      el.setAttribute(this.replaceStatus, this.isReplaced);
+    },
+    replaceSrc: function(el){
+      this.setReplaceFlag(el);
+
+      el.style.backgroundImage = "url("+ el.dataset.lazy +")";
+    },
+    checkVisibility: function(el){
+      if (
+          el.dataset.replaced != this.isReplaced
+          && el.dataset.visible == this.isVisible
+          && this.hasClass(el, this.active)
+          )
+      {
+        this.replaceSrc(el);
+      }
     }
   }
 
