@@ -1,41 +1,27 @@
 	$pageIntro: '.page-intro';
 /* Common =================================================================== */
 	#{$pageIntro}{
+		margin: 0 0 $mainIndent*2;
 		@extend %darkBlock;
 		@extend %bWithOverlay;
-		#{$pageTitle}{
-			margin: 0;
-			font-size: 50px;
-			text-shadow: 0 0 1px $primaryTextColor;
-			border-bottom: 1px solid #FFF;
-		}
 		#{$gDescription}{
 			@extend %introDescription;
 		}
 	}
 /* Media Queries ============================================================ */
-	@media screen and (max-width: $m){
+	@media screen and (max-width: $l){
 		#{$pageIntro}{
 			height: 400px;
-			#{$postTitle}{
-				font-size: 40px;
-			}
 		}
 	}
-	@media screen and (max-width: $s){
+	@media screen and (max-width: $m){
 		#{$pageIntro}{
 			height: 300px;
-			#{$postTitle}{
-				font-size: 30px;
-			}
 		}
 	}
 	@media screen and (max-width: $xs){
 		#{$pageIntro}{
-			height: 200px;
-			#{$postTitle}{
-				font-size: 20px;
-			}
+			height: 250px;
 		}
 	}
 /* ========================================================================== */

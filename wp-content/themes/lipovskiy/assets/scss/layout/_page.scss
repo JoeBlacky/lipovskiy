@@ -39,7 +39,7 @@
     padding: $mainIndent/2 0;
     border-bottom: 1px solid $dividerColor;
   }
-/*  Helper Classes ========================================================== */
+/* Helper Classes =========================================================== */
   .page{
     position: relative;
     flex-direction: column;
@@ -54,12 +54,20 @@
     padding-right: $mainIndent;
     margin: 0 auto;
   }
+/* Headings ================================================================= */
   #{$title}{
     @extend %title;
   }
   #{$subTitle}{
     font-size: 24px;
   }
+  #{$pageTitle}{
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 1px $primaryTextColor;
+    border-bottom: 1px solid;
+  }
+/* ========================================================================== */
   .img-rounded{
     img{
      border-radius: 50%;
@@ -97,16 +105,33 @@
     }
   }
   @media screen and (max-width: $m){
-    #{$title}{
-      font-size: 36px;
-    }
+    /* Headings ============================================================= */
+      #{$title}{
+        font-size: 36px;
+      }
+      #{$pageTitle}{
+        font-size: 40px;
+      }
+    /* ====================================================================== */
   }
   @media screen and (max-width: $s){
     body{
       font-size: 14px;
     }
+    p{
+      margin-bottom: $mainIndent*.75;
+    }
     #{$title}{
       font-size: 32px;
     }
+  }
+  @media screen and (max-width: $xs){
+    /* Headings ============================================================= */
+      #{$pageTitle}{
+        font-size: 34px;
+      }
+      #{$title}{
+        font-size: 28px;
+      }
   }
 /* ========================================================================== */

@@ -3,13 +3,12 @@
 	#{$itemTrigger}{
 		cursor: pointer;
 		&.menu{
-			background: $primaryTextColor;
-			color: #FFF;
 			font-size: 12px;
 			border-radius: 2px;
 			transition: background $fastSpeed ease-in;
+			@extend %darkBlock;
 			&.active{
-				background: $secondaryColor;
+				background-color: $secondaryColor;
 			}
 		}
 	}

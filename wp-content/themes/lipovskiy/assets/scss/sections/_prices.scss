@@ -1,14 +1,10 @@
-  $pricesSection: '.b-service';
 /* Prices Section =========================================================== */
-  #{$pricesSection}{
+  #{$blockService}{
     text-align: center;
-    #{$title}{
-      margin: 0 0 $mainIndent*2.5;
-    }
     header{
       align-items: center;
       justify-content: center;
-      flex-flow: column;
+      flex-flow: column wrap;
       margin: 0 0 $mainIndent;
     }
     img{
@@ -16,10 +12,10 @@
       height: 70px;
       padding: $mainIndent*.5;
       margin-bottom: $mainIndent*.5;
-      background: $primaryTextColor url(../img/noise.png) repeat left top;
       border-radius: 50%;
       border: 2px solid $secondaryColor;
       box-shadow: 0 2px 5px 1px #000;
+      @extend %darkBlock;
     }
     #{$subTitle}{
       margin: 0;
@@ -34,9 +30,30 @@
   }
 /* Media Queries ============================================================ */
   @media screen and (max-width: $m){
-    #{$pricesSection}{
+    #{$blockService}{
       #{$subTitle}{
-        font-size: inherit;
+        font-size: 28px;
+      }
+    }
+  }
+  @media screen and (max-width: $s){
+    #{$blockService}{
+      #{$subTitle}{
+        font-size: 26px;
+      }
+    }
+  }
+  @media screen and (max-width: $xs){
+    #{$blockService}{
+      header{
+        margin-bottom: $mainIndent*.5;
+      }
+      img{
+        width: 50px;
+        height: 50px;
+      }
+      #{$subTitle}{
+        font-size: 20px;
       }
     }
   }

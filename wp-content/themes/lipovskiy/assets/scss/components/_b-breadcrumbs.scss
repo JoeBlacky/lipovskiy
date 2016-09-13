@@ -1,0 +1,27 @@
+/* Common =================================================================== */
+	#{$breadcrumbs}{
+		margin-bottom: $mainIndent*3;
+		li{
+			display: flex;
+			align-items: center;
+			&:last-child{
+				padding: $mainIndent*.2 $mainIndent*.5;
+				@extend %darkBlock;
+				&::after{
+					display: none;
+				}
+			}
+			&::after{
+				content: $iArrowRight;
+				padding: 0 $mainIndent*.5;
+				font: 10px/1 $iconsFont;
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $l){
+		#{$breadcrumbs}{
+			margin-bottom: $mainIndent*1.5;
+		}
+	}
+/* ========================================================================== */

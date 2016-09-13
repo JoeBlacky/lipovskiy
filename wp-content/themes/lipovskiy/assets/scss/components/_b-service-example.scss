@@ -1,11 +1,11 @@
-/* ========================================================================== */
+/* Common =================================================================== */
 	#{$bServiceExample}{
 		position: relative;
 		margin: 0 auto $mainIndent*2;
-		padding: $mainIndent*2 0;
+		padding: $mainIndent*2 0 $mainIndent*2.5;
 		text-align: center;
-		color: #FFF;
-		background: $primaryDarkColor url(../img/noise.png) repeat left top;
+		background-color: $primaryDarkColor;
+		@extend %darkBlock;
 		.mw{
 			position: relative;
 			max-width: $s;
@@ -13,8 +13,10 @@
 		#{$roundedImages}{
 			justify-content: center;
 		}
-		h2{
-			@extend %title;
+		#{$title}{
+			display: inline-block;
+			margin-bottom: $mainIndent*2;
+			border-bottom: 1px solid;
 		}
 	}
 /* ========================================================================== */

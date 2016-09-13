@@ -12,7 +12,7 @@
 <?php while(have_posts()) : the_post(); ?>
   <?php get_template_part('common/page-intro'); ?>
   <div class="mw">
-    <div class="post-content post-entry">
+    <div class="medium post-content post-entry">
       <?php echo the_content(); ?>
     </div>
     <?php if($services->have_posts()): ?>

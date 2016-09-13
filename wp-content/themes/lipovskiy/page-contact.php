@@ -8,7 +8,7 @@
 	<?php while(have_posts()) : the_post(); ?>
 		<?php get_template_part('common/page-intro'); ?>
 		<div class="mw flex p-contacts">
-			<div class="post-content post-entry">
+			<div class="medium post-content post-entry">
 				<?php echo the_content(); ?>
 			</div>
 			<div class="b-contacts">

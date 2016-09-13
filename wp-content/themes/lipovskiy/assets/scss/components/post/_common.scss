@@ -17,8 +17,7 @@
 		background: $secondaryColor top center / cover;
 	}
 	#{$postContent}{
-		padding-top: $mainIndent*5;
-		padding-bottom: $mainIndent*4;
+		padding-bottom: $mainIndent*2;
 		color: $primaryDarkColor;
 		&::after{
 			content: '';
@@ -43,6 +42,10 @@
 	}
 	#{$postEntry}{
 		text-align: center;
+		&.medium{
+			max-width: $m;
+			margin: 0 auto;
+		}
 		h2{
 			font-size: 30px;
 			margin: 0 0 $mainIndent;
@@ -51,7 +54,6 @@
 /* Media Queries ============================================================ */
 	@media screen and (max-width: $l){
 		#{$postContent}{
-			padding-top: $mainIndent*2;
 			padding-bottom: $mainIndent;
 		}
 	}

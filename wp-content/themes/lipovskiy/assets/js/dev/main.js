@@ -519,7 +519,11 @@
     replaceSrc: function(el){
       this.setReplaceFlag(el);
 
-      el.style.backgroundImage = "url("+ el.dataset.lazy +")";
+      if (el.hasAttribute('src')){
+        el.setAttribute('src', el.dataset.lazy);
+      } else {
+        el.style.backgroundImage = "url("+ el.dataset.lazy +")";
+      }
     },
     checkVisibility: function(el){
       if (

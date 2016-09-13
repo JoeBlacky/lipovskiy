@@ -6,3 +6,4 @@
     <?php the_title( '<h1 class="post-title page-title">', '</h1>' ); ?>
   </div>
 </div>
+<?php breadcrumbs(); ?>
