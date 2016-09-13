@@ -1,7 +1,12 @@
-  $map: '.map';
-/* Map ====================================================================== */
-  #{$map}{
-    width: 100%;
+/*
+  Block which contains google map.
+  Have loader centered on background which shown while map not loaded.
+  When map loaded, it overlaps loader.
+
+  1. $bMap - container for map.
+*/
+/* Common =================================================================== */
+  #{$bMap}{
     height: 500px;
     background: $primaryDarkColor $ajaxLoader no-repeat center center / 50px 50px;
     img{
@@ -11,17 +16,17 @@
   }
 /* Media Queries ============================================================ */
   @media screen and (max-width: $m){
-    #{$map}{
+    #{$bMap}{
       height: 400px;
     }
   }
   @media screen and (max-width: $s){
-    #{$map}{
+    #{$bMap}{
       height: 300px;
     }
   }
   @media screen and (max-width: $xs){
-    #{$map}{
+    #{$bMap}{
       height: 250px;
     }
   }

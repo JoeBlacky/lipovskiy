@@ -14,6 +14,7 @@
 	$successColor:	 	   #06B86B;
 /* ========================================================================== */
 	$linkWithIcon: '.i-link';
+	$link:         '.link';
 	$title: 			 '.title';
 	$pageTitle:    '.page-title';
 	$subTitle:     '.sub-title';
@@ -24,7 +25,6 @@
 	$roundedImages: '.rounded-images';
 	$itemTrigger: '.item-trigger';
 	$iconClass: '.icn';
-	$breadcrumbs:  '.crumbs';
 /* Post ===================================================================== */
 	$post:        '.post';
 	$postTitle:   '.post-title';
@@ -37,11 +37,24 @@
 	$readMore:    '.read-more';
 	$listItem:    '.list-item';
 	$singlePost:  '.single-post';
+/* Block | Page Intro ======================================================= */
+	$bPageIntro: 			'.b-page-intro';
+/* Block | Breadcrumbs ====================================================== */
+	$bBreadcrumbs:    '.b-crumbs';
+	$crumb: 					'.crumb';
+/* Block | Map ============================================================== */
+	$bMap:            '.b-map';
+/* Block | Service ========================================================== */
+	$bService: 		    '.b-service';
+/* Block | Contact Links ==================================================== */
+	$bContactLinks:   '.b-contact-links';
+	$linkDirectionH:  '.links-horizontal';
+	$linkDirectionV:  '.links-vertical';
+	$cLinkW:					40px;
+	$cLinkH:					$cLinkW;
 /* Blocks =================================================================== */
-	$bService: 		'.b-service';
 	$bServiceExample: '.b-service-example';
-	$contactsBlock: '.b-contacts';
-	$blockService: '.b-service';
+	$bService:        '.b-service';
 /* Icons ==================================================================== */
 	$iPin:        		'\E900';
 	$iPhone:      		'\E901';

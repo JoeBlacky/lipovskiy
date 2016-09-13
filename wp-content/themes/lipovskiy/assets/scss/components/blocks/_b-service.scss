@@ -1,6 +1,10 @@
-/* Prices Section =========================================================== */
-  #{$blockService}{
-    text-align: center;
+/*
+  Block which contains service image, title and price table.
+  Used in homepage, prices and each service page.
+  On service page there's no title.
+*/
+/* Common =================================================================== */
+  #{$bService}{
     header{
       align-items: center;
       justify-content: center;
@@ -12,39 +16,35 @@
       height: 70px;
       padding: $mainIndent*.5;
       margin-bottom: $mainIndent*.5;
-      border-radius: 50%;
       border: 2px solid $secondaryColor;
+      border-radius: 50%;
       box-shadow: 0 2px 5px 1px #000;
       @extend %darkBlock;
     }
     #{$subTitle}{
       margin: 0;
+      color: $primaryDarkColor;
       font-size: 30px;
+      text-align: center;
     }
-    #{$priceTable}{
-      text-align: left;
-    }
-  }
-  .s-prices{
-    text-align: center;
   }
 /* Media Queries ============================================================ */
   @media screen and (max-width: $m){
-    #{$blockService}{
+    #{$bService}{
       #{$subTitle}{
         font-size: 28px;
       }
     }
   }
   @media screen and (max-width: $s){
-    #{$blockService}{
+    #{$bService}{
       #{$subTitle}{
         font-size: 26px;
       }
     }
   }
   @media screen and (max-width: $xs){
-    #{$blockService}{
+    #{$bService}{
       header{
         margin-bottom: $mainIndent*.5;
       }

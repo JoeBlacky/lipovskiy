@@ -14,7 +14,7 @@
             <div class="flex b-license">
               <?php foreach($licenseImg as $image): ?>
                 <a class="image" target="_blank" href="<?php echo $image['img']; ?>">
-                  <img class="lazy" src="" data-lazy="<?php echo $image['preview']; ?>" alt="" width="220" height="304" />
+                  <img src="<?php echo $image['preview']; ?>" alt="" width="220" height="304" />
                 </a>
               <?php endforeach; ?>
             </div>

@@ -1,7 +1,16 @@
+/*
+	Simple breadcrumbs trail.
+
+  1. $bBreadcrumbs(ul) - parent container.
+  2. $crumb(li) - child elements holding <a> inside except last one.
+
+	Used all over the site, except home and category page.
+  Function which creates breadcrumbs described in functions.php
+*/
 /* Common =================================================================== */
-	#{$breadcrumbs}{
+	#{$bBreadcrumbs}{
 		margin-bottom: $mainIndent*3;
-		li{
+		#{$crumb}{
 			display: flex;
 			align-items: center;
 			&:last-child{
@@ -20,7 +29,7 @@
 	}
 /* Media Queries ============================================================ */
 	@media screen and (max-width: $l){
-		#{$breadcrumbs}{
+		#{$bBreadcrumbs}{
 			margin-bottom: $mainIndent*1.5;
 		}
 	}

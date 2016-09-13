@@ -1,0 +1,76 @@
+/*
+	List of links with address, phone, email etc.
+	Can have horizontal or vertical direction.
+	Uses icons font to set svg icons on ::before el.
+
+	$bContactLinks(ul) - container el.
+	$link(a, span) - link or text with icon.
+*/
+/* Common =================================================================== */
+	#{$bContactLinks}{
+		display: flex;
+		flex-wrap: wrap;
+		#{$link}{
+			&::before{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: $cLinkW;
+				height: $cLinkH;
+				font-size: 24px;
+			}
+		}
+	}
+/* Direction | Horizontal =================================================== */
+	#{$linkDirectionH}{
+		text-align: center;
+		padding-top: $mainIndent*3;
+		padding-bottom: $mainIndent*3;
+		li{
+			flex: 0 1 25%;
+		}
+		#{$link}{
+			display: block;
+			margin: 0 $mainIndent*.5 $mainIndent;
+			&::before{
+				padding: 0;
+				margin: 0 auto $mainIndent*.5;
+				border-bottom: 1px solid;
+			}
+		}
+	}
+/* Direction | Vertical ===================================================== */
+	#{$linkDirectionV}{
+		#{$bContactLinks}{
+			flex-direction: column;
+		}
+		#{$link}{
+			padding-right: $mainIndent*.5;
+      border-radius: 2px;
+      &::before{
+      	margin: 0 $mainIndent*.5 0 0;
+        padding: 0 0 0 $mainIndent*.1;
+      }
+		}
+		li{
+      margin: 0 0 $mainIndent*.5;
+    }
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $l){
+		/* Direction | Horizontal =============================================== */
+			#{$linkDirectionH}{
+				padding: $mainIndent 0;
+			}
+		/* ====================================================================== */
+	}
+	@media screen and (max-width: $s){
+		/* Direction | Horizontal =============================================== */
+			#{$linkDirectionH}{
+				li{
+					flex: 0 1 50%;
+				}
+			}
+		/* ====================================================================== */
+	}
+/* ========================================================================== */

@@ -10,7 +10,7 @@
 <?php if($enabled): ?>
   <div
     id="map"
-    class="map"
+    class="b-map"
     data-lat="<?php echo $lat; ?>"
     data-lng="<?php echo $lng; ?>"
     data-pin="<?php echo $pin; ?>"

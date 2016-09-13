@@ -1,5 +1,5 @@
 <div
-	class="page-intro"
+	class="b-page-intro"
 	style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID); ?>"
 >
   <div class="description">

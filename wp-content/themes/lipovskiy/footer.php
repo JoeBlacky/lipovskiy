@@ -6,7 +6,9 @@
         <h3 class="sub-title">
           <?php _e('Contact information'); ?>
         </h3>
-        <?php get_template_part('common/contact-links'); ?>
+        <div class="links-vertical">
+          <?php get_template_part('common/contact-links'); ?>
+        </div>
       </section>
       <div class="contact-form">
         <h3 class="sub-title">
@@ -16,7 +18,7 @@
       </div>
     </div>
   </footer>
-  <a href="#" id="scroll-top" class="icn d-angle-top scroll-top"></a>
+  <a href="/" id="scroll-top" class="icn d-angle-top scroll-top"></a>
 </div>
 <?php wp_footer(); ?>
 </body>

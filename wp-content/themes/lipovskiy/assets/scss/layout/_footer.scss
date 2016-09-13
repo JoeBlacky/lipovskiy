@@ -35,30 +35,14 @@ $fConactFormW: 100% - $fContactInfoW;
 /* Contact Info ============================================================= */
     #{$fContactInfo}{
       flex: 0 1 $fContactInfoW;
-      li{
-        margin: 0 0 $mainIndent*.5;
-      }
     }
-    #{$linkWithIcon}{
-      padding-right: $mainIndent*.5;
-      border-radius: 2px;
-      &::before{
-        display: flex;
-        align-items: center;
-        width: $linkIconWidth;
-        height: $linkIconHeight;
-        margin: 0 $mainIndent*.5 0 0;
-        padding: 0 0 0 $mainIndent*.4;
-        border-right: 1px solid lighten($footerBackground,5%);
-        font: 24px/1 $iconsFont;
-        color: inherit;
-        box-sizing: border-box;
-      }
-    }
-    .phone,
-    .pin{
-      &::before{
-        font-size: 24px;
+    #{$bContactLinks}{
+      font-size: 14px;
+      #{$link}{
+        &::before{
+          border-right: 1px solid lighten($footerBackground,5%);
+          color: inherit;
+        }
       }
     }
 /* Contact Form ============================================================= */
@@ -77,7 +61,10 @@ $fConactFormW: 100% - $fContactInfoW;
 /* Not Handheld ============================================================= */
   #{$notHandheld}{
     #{$footer}{
-      a#{$linkWithIcon}{
+      a#{$link}{
+        &::before{
+          transition: border $fastSpeed linear;
+        }
         transition:
           color $fastSpeed linear,
           background $fastSpeed linear;
@@ -115,22 +102,25 @@ $fConactFormW: 100% - $fContactInfoW;
       #{$fContactInfo}{
         order: 2;
       }
-      .links{
-        display: flex;
-        flex-wrap: wrap;
+      #{$linkDirectionV}{
+        #{$bContactLinks}{
+          flex-direction: row;
+        }
+      }
+      #{$bContactLinks}{
         text-align: center;
         li{
           flex: 0 1 50%;
           margin: 0 0 $mainIndent;
         }
-      }
-      #{$linkWithIcon}{
-        flex-direction: column;
-        padding: 0;
-        &::before{
-          margin: 0 0 $mainIndent*.5;
-          border: 0;
-          border-bottom: 1px solid;
+        #{$link}{
+          flex-direction: column;
+          padding: 0;
+          &::before{
+            margin: 0 0 $mainIndent*.5;
+            border: 0;
+            border-bottom: 1px solid;
+          }
         }
       }
     /* Contact Form ========================================================= */

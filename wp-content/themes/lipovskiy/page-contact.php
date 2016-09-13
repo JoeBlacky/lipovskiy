@@ -11,7 +11,7 @@
 			<div class="medium post-content post-entry">
 				<?php echo the_content(); ?>
 			</div>
-			<div class="b-contacts">
+			<div class="links-horizontal">
 				<?php get_template_part('common/contact-links'); ?>
 			</div>
 		</div>

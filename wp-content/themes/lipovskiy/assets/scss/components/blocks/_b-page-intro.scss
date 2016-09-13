@@ -1,26 +1,33 @@
-	$pageIntro: '.page-intro';
+/*
+	Block with page title and description(optionaly).
+	Positioned at the top of page.
+*/
 /* Common =================================================================== */
-	#{$pageIntro}{
+	#{$bPageIntro}{
 		margin: 0 0 $mainIndent*2;
 		@extend %darkBlock;
 		@extend %bWithOverlay;
 		#{$gDescription}{
 			@extend %introDescription;
 		}
+		#{$pageTitle}{
+			text-shadow: 0 0 1px $primaryTextColor;
+    	border-bottom: 1px solid;
+		}
 	}
 /* Media Queries ============================================================ */
 	@media screen and (max-width: $l){
-		#{$pageIntro}{
+		#{$bPageIntro}{
 			height: 400px;
 		}
 	}
 	@media screen and (max-width: $m){
-		#{$pageIntro}{
+		#{$bPageIntro}{
 			height: 300px;
 		}
 	}
 	@media screen and (max-width: $xs){
-		#{$pageIntro}{
+		#{$bPageIntro}{
 			height: 250px;
 		}
 	}
