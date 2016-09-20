@@ -4,6 +4,7 @@
   body{
     min-width: $minWidth;
     margin: 0;
+    padding-top: $headerH;
     color: $primaryColor;
     font: 300 16px/1.5 $primaryFont;
     background: rgb(250,250,250);
@@ -53,6 +54,9 @@
     padding-left: $mainIndent;
     padding-right: $mainIndent;
     margin: 0 auto;
+  }
+  .t-center{
+    text-align: center;
   }
 /* Headings ================================================================= */
   #{$title}{
@@ -114,6 +118,7 @@
   }
   @media screen and (max-width: $s){
     body{
+      padding-top: $mHeaderH;
       font-size: 14px;
     }
     p{

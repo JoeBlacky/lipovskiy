@@ -1,0 +1,18 @@
+/* Common =================================================================== */
+  #{$infoBar}{
+    padding: $mainIndent*.5 0;
+    @extend %darkBlock;
+    #{$linkWithIcon}{
+      font-size: 12px;
+      &::before{
+        font-size: 18px;
+      }
+    }
+    .pin{
+      &::before{
+        padding-right: 0;
+        font-size: 20px;
+      }
+    }
+  }
+/* ========================================================================== */

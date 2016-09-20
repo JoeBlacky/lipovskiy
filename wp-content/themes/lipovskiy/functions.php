@@ -1,10 +1,7 @@
 <?php
 /**
- * Lipovskiy functions and definitions.
- *
- *
  * @package Lipovskiy
- */
+**/
 /* Common theme setup ======================================================= */
 	if (!function_exists( 'lipovskiy_setup' )) :
 

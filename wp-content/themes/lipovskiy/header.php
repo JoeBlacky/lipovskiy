@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="page flex not-handheld">
 	<header class="header" id="header">
-    <div class="links header-info-bar">
+    <div class="links info-bar">
       <ul class="mw flex">
       	<?php if(get_option('address')): ?>
       		<li>
@@ -40,8 +40,7 @@
 					<a href='<?php echo esc_url(home_url( '/' )); ?>' class="logo flex" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
 						<img src='<?php echo esc_url(get_theme_mod('themeslug_logo')); ?>' alt='<?php echo esc_attr(get_bloginfo('name', 'display')); ?>' width="50" height="50" />
 						<span>
-	            <small>Стоматологическая студия</small>
-	            Доктора Липовского
+	            <?php echo get_bloginfo('name'); ?>
 	          </span>
 					</a>
 				<?php endif; ?>

@@ -25,6 +25,19 @@
 	$roundedImages: '.rounded-images';
 	$itemTrigger: '.item-trigger';
 	$iconClass: '.icn';
+/* Layout | Header ========================================================== */
+	$header:   		'.header';
+  $hMainBar: 		'.header-main-bar';
+  $headerH:  		120px;
+  $mHeaderH: 		178px;
+/* Components | Info bar ==================================================== */
+	$infoBar:  		'.info-bar';
+/* Components | Navigation ================================================== */
+  $mainNav: 		'.main-nav';
+	$navWrap: 		'.nav-wrapper';
+/* Components | Logo ======================================================== */
+  $logo:     		'.logo';
+  $logoHeight: 	40px;
 /* Post ===================================================================== */
 	$post:        '.post';
 	$postTitle:   '.post-title';
@@ -55,6 +68,9 @@
 /* Blocks =================================================================== */
 	$bServiceExample: '.b-service-example';
 	$bService:        '.b-service';
+/* Pages =================================================================== */
+	$pageContacts: '.p-contacts';
+	$pageCategory: '.p-category';
 /* Icons ==================================================================== */
 	$iPin:        		'\E900';
 	$iPhone:      		'\E901';

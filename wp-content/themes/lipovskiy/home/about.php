@@ -6,7 +6,7 @@
     $sContent   = customStringLength(apply_filters('the_content', $aboutPage->post_content), 1273);
     $licenseImg = get_field('license', $aboutPage->ID);
 ?>
-  <div class="section about-company">
+  <div class="section b-about-company">
     <div class="mw flex">
       <section class="post-content description">
         <div class="floated-content">

@@ -1,19 +1,18 @@
-  $aboutSection: '.about-company';
+  $bAboutCompany: '.b-about-company';
 /* ========================================================================== */
-  #{$aboutSection}{
+  #{$bAboutCompany}{
     #{$gDescription}{
       padding: 0 $mainIndent*1.5 0 0;
     }
     #{$button}{
       display: block;
       width: 150px;
-      margin: 40px 0 0;
-      text-align: center;
+      margin: $mainIndent*2 0 0;
     }
   }
 /* Media Queries ============================================================ */
   @media screen and (max-width: $m){
-  	#{$aboutSection}{
+  	#{$bAboutCompany}{
       .mw{
         flex-direction: column;
       }
@@ -26,7 +25,7 @@
   	}
   }
   @media screen and (max-width: $s){
-    #{$aboutSection}{
+    #{$bAboutCompany}{
       h2{
         text-align: center;
       }

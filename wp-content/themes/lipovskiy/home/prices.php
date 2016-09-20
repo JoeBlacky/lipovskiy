@@ -5,7 +5,7 @@
 		$service    = customPostListing('post', '1','services');
 		$pricesPage = get_page_by_path('prices');
 ?>
-	<div class="section s-prices" id="prices">
+	<div class="section t-center" id="prices">
 	  <div class="mw">
 	    <?php if($service->have_posts()): ?>
 		    <?php while($service->have_posts()): $service->the_post() ?>

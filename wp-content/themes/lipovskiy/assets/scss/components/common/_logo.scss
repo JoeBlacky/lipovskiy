@@ -1,0 +1,18 @@
+/* Common =================================================================== */
+  #{$logo}{
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .3px;
+    align-items: center;
+    img{
+      width: 50px;
+    }
+    span{
+      width: 183px;
+      padding: 0 0 0 $mainIndent*.5;
+      &:first-line{
+        font-size: 13px;
+      }
+    }
+  }
+/* Nav ====================================================================== */
