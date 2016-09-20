@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   var app = {
     active: 'active',
@@ -6,13 +7,13 @@
     errorCls: 'error',
 
     init: function(){
-      this.nodeCleaning(document);
-      triggers.init();
-      nav.init();
-      slider.init();
-      forms.init();
-      map.init();
-      scrollTop.init();
+      this.nodeCleaning(document),
+      triggers.init(),
+      nav.init(),
+      slider.init(),
+      forms.init(),
+      map.init(),
+      scrollTop.init(),
       lazyLoad.init();
     },
     getLang: function(){
@@ -47,11 +48,11 @@
       this.setActiveItem();
     },
     setActiveItem: function(){
-      var url = window.location.href;
-      var nav = document.getElementById(this.navId);
-      var navItem = nav.querySelectorAll('a');
+      var url = window.location.href,
+          nav = document.getElementById(this.navId),
+          navItem = nav.querySelectorAll('a');
 
-      for (i = 0; i < navItem.length; i++) {
+      for (var i = 0; i < navItem.length; i++) {
         if (navItem[i].getAttribute('href') == url) {
           navItem[i].classList.add(this.active);
         }
@@ -68,10 +69,10 @@
       this.itemTriggers();
     },
     itemTriggers: function() {
-      var trigger = document.getElementsByClassName(this.itemTrigger);
-      var _this = this;
+      var _this = this,
+          trigger = document.getElementsByClassName(this.itemTrigger);
 
-      for (i = 0; i < trigger.length; i++) {
+      for (var i = 0; i < trigger.length; i++) {
         trigger[i].addEventListener('click', function(e){
           var target = document.getElementById(this.dataset.trigger);
 
@@ -89,8 +90,8 @@
       this.createMap();
     },
     createMap: function(){
-      var map = document.getElementById('map');
-      var _this = this;
+      var _this = this,
+          map = document.getElementById('map');
 
       if (map && typeof google === 'object' && typeof google.maps === 'object') {
         gMap = new google.maps.Map(map, {
@@ -99,8 +100,8 @@
           scrollwheel: false
         });
 
-        var pin = _this.getMapPin(map, gMap);
-        var infoWin = _this.getInfoWindow(map, gMap);
+        var pin = _this.getMapPin(map, gMap),
+            infoWin = _this.getInfoWindow(map, gMap);
 
         if (pin) {
           pin.addListener('click', function() {
@@ -110,15 +111,15 @@
       }
     },
     getCoords: function(map){
-      var lat = +map.dataset.lat;
-      var lng = +map.dataset.lng;
-      var companyCoords = {lat: lat, lng: lng};
+      var lat = +map.dataset.lat,
+          lng = +map.dataset.lng,
+          companyCoords = {lat: lat, lng: lng};
 
       return companyCoords;
     },
     getMapPin: function(map, gMap){
-      var markerUrl = map.dataset.pin;
-      var _this = this;
+      var _this = this,
+          markerUrl = map.dataset.pin;
 
       if (markerUrl) {
         var marker = new google.maps.Marker({
@@ -131,8 +132,8 @@
       }
     },
     getInfoWindow: function(map, gMap){
-      var info = map.dataset.info;
-      var _this = this;
+      var _this = this,
+          info = map.dataset.info;
 
       if (info) {
         var infoWindow = new google.maps.InfoWindow({
@@ -170,7 +171,7 @@
       var form  = document.getElementsByTagName('form');
       var _this = this;
 
-      for (i = 0; i < form.length; i++) {
+      for (var i = 0; i < form.length; i++) {
         form[i].addEventListener('submit', function(e){
           e.preventDefault();
 
@@ -185,7 +186,7 @@
       var required = form.getElementsByClassName(this.required);
       var invalid = form.getElementsByClassName(this.validError);
 
-      for (i = 0; i < required.length; i++) {
+      for (var i = 0; i < required.length; i++) {
         field = required[i];
 
         this.checkEmptyValue(field);
@@ -294,8 +295,9 @@
       }, 50000);
     },
     prepareData: function(form){
-      var fields = form.elements;
-      var fieldsArray = [];
+      var field,
+          fields = form.elements,
+          fieldsArray = [];
 
       for (var i = 0; i < fields.length; i++) {
         if (fields[i].getAttribute('name')){
@@ -386,7 +388,7 @@
       var dots = document.getElementsByClassName(this.navDot);
       var _this = this;
 
-      for (i = 0; i < dots.length ; i++) {
+      for (var i = 0; i < dots.length ; i++) {
         dots[i].addEventListener('click', function(){
           if(!_this.hasClass(this, _this.active)){;
             _this.switchSlide(this);
@@ -401,12 +403,12 @@
       this.removeActive(dots);
     },
     removeActive: function(elements){
-      for (i = 0; i < elements.length; i++){
+      for (var i = 0; i < elements.length; i++){
         elements[i].classList.remove(this.active);
       }
     },
     setSlidePosition: function(children){
-      for (i = 0; i < children.length; i++){
+      for (var i = 0; i < children.length; i++){
         children[i].setAttribute(this.data, [i]);
       }
     },
@@ -416,7 +418,7 @@
 
       this.hideSlides(slides);
 
-      for (i = 0; i < slides.length; i++){
+      for (var i = 0; i < slides.length; i++){
         if (slides[i].dataset.link == targetSlide){
           slides[i].classList.add(this.active);
           lazyLoad.checkVisibility(slides[i]);
@@ -481,8 +483,8 @@
       var scrollDuration = this.scrollSpeed,
           scrollStep = -window.scrollY / (scrollDuration / 15),
           scrollInterval = setInterval(function(){
-          if ( window.scrollY != 0 ) {
-              window.scrollBy( 0, scrollStep );
+          if (window.scrollY != 0) {
+              window.scrollBy(0, scrollStep);
           }
           else clearInterval(scrollInterval);
       },15);
@@ -522,7 +524,7 @@
       if (el.hasAttribute('src')){
         el.setAttribute('src', el.dataset.lazy);
       } else {
-        el.style.backgroundImage = "url("+ el.dataset.lazy +")";
+        el.style.backgroundImage = "url(" + el.dataset.lazy + ")";
       }
     },
     checkVisibility: function(el){
